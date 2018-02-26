@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Chiricuta & Chiricuto </title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <p><a href="index.html"><h1> Climate Study </h1></a></p>
+  <p><a href="temp_model.html"><h3> previous page </h3></a></p>
+  <p><ul>
+
+    <! GRU vs LSTM  >
+    <li> GRU vs LSTM </li><br>
+      <ol>
+        <li> Variable: Temp(1000mb) </li>
+        <li> Period : JJA of 1979~2016 (train) / 2017 (test)
+        <li> Hidden layer size : 2048 </li>
+        <li> Epoch : 100 </li>
+      </ol><br><br>
+      - GRU (accuracy : 34%) &nbsp&nbsp&nbsp&nbsp&nbsp red(predicted) / black (observed)
+      <img src="C:\Users\admin\Desktop\web\temp_prediction\season2\result_1\JJA_v3_GRU_h2048_e100(21.82,34%).png" width="100%">
+      - LSTM (accuracy: 41%) &nbsp&nbsp&nbsp&nbsp&nbsp red(predicted) / black (observed)
+      <img src="C:\Users\admin\Desktop\web\temp_prediction\season2\result_1\JJA_v3_LSTM_h2048_e100(12.8,41%).png" width="100%">
+
+    <br><br><br>
+
+    <! Multi layers >
+    <li> Multi layers </li><br>
+      <ol>
+        <li> Variable: Temp(1000mb) </li>
+        <li> Period : JJA of 1979~2016 (train) / 2017 (test)
+        <li> Method : GRU </li>
+        <li> Epoch : 100 </li>
+      </ol><br><br>
+        - 5 layers (accuracy : 33%) &nbsp&nbsp&nbsp&nbsp&nbsp red(predicted) / black (observed)
+        <img src="C:\Users\admin\Desktop\web\temp_prediction\season2\result_1\JJA_v3_GRU_Mul5_e100(26.41,33%).png" width="100%">
+
+    <br><br><br>
+
+    <! Appropriate hidden layer size>
+    <li> Appropriate layer size </li><br>
+    <ol>
+      <li> Variable: Temp(1000mb) </li>
+      <li> Period : JJA of 1979~2016 (train) / 2017 (test)
+      <li> Method : GRU </li>
+      <li> Epoch : 100 </li>
+    </ol><br><br>
+      - hidden layer size : 512 (accuracy : 43%) &nbsp&nbsp&nbsp&nbsp&nbsp red(predicted) / black (observed)
+      <img src="C:\Users\admin\Desktop\web\temp_prediction\season2\result_1\JJA_v3_GRU_h512_e100(19.18,43%).png" width="100%">
+  <br><br>
+  </ul>
+  </p>
+</body>
+
+</html>
